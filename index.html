@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reno's House of Fades | Barbershop in Reno, NV</title>
+  <meta name="description" content="Reno's House of Fades — precision fades, sharp line-ups, beard trims and hot towel shaves on W Peckham Ln, Reno NV. 8 barbers, walk-ins welcome, book online." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <meta property="og:title" content="Reno's House of Fades" />
+  <meta property="og:description" content="Precision fades, sharp line-ups & hot towel shaves in Reno, NV. Book your barber online." />
+  <meta property="og:image" content="assets/img/team-storefront.jpg" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Yellowtail&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarberShop",
+    "name": "Reno's House of Fades",
+    "image": "assets/img/team-storefront.jpg",
+    "telephone": "+1-775-357-9590",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "180 W Peckham Ln, Suite 1130",
+      "addressLocality": "Reno",
+      "addressRegion": "NV",
+      "postalCode": "89509",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "09:00", "closes": "18:00"
+    }],
+    "sameAs": [
+      "https://www.instagram.com/renoshouseoffades/",
+      "https://www.facebook.com/renoshouseoffades/",
+      "https://www.yelp.com/biz/reno-s-house-of-fades-reno"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== Loader ===== -->
+  <div class="loader" id="loader">
+    <img src="assets/img/logo-white.png" alt="" />
+    <div class="loader-pole"></div>
+  </div>
+
+  <!-- ===== Nav ===== -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav-logo" aria-label="Reno's House of Fades home">
+      <img src="assets/img/logo-white.png" alt="Reno's House of Fades Barbershop" />
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">The Shop</a>
+      <a href="#barbers">Barbers</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+      <a href="#book" class="btn btn-sm btn-blue nav-cta">Book Now</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="top">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster.jpg">
+      <source src="assets/video/hero.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-shade"></div>
+    <div class="hero-inner">
+      <p class="eyebrow reveal"><span class="dot"></span> Est. 2015 · Reno, Nevada</p>
+      <h1 class="hero-title reveal">
+        <span class="line">Reno's</span>
+        <span class="line big">House <em>of</em> Fades</span>
+      </h1>
+      <p class="hero-sub reveal">Precision fades. Razor-sharp line-ups. Hot towel shaves.<br/>Ten years of keeping Reno fresh — one chair at a time.</p>
+      <div class="hero-ctas reveal">
+        <a href="#book" class="btn btn-blue">Book a Barber</a>
+        <a href="tel:+17753579590" class="btn btn-ghost">Call (775) 357-9590</a>
+      </div>
+      <div class="hero-status reveal" id="heroStatus"></div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- ===== Marquee ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Skin Fades</span><i>✦</i><span>Line-Ups</span><i>✦</i><span>Hot Towel Shaves</span><i>✦</i><span>Beard Trims</span><i>✦</i><span>Walk-Ins Welcome</span><i>✦</i><span>Appointments Available</span><i>✦</i>
+      <span>Skin Fades</span><i>✦</i><span>Line-Ups</span><i>✦</i><span>Hot Towel Shaves</span><i>✦</i><span>Beard Trims</span><i>✦</i><span>Walk-Ins Welcome</span><i>✦</i><span>Appointments Available</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- ===== About ===== -->
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <div class="about-media reveal">
+        <img src="assets/img/team-storefront.jpg" alt="The House of Fades barber team outside the shop on W Peckham Ln" loading="lazy" />
+        <div class="about-badge">
+          <strong>10</strong>
+          <span>Years<br/>Strong</span>
+        </div>
+      </div>
+      <div class="about-copy">
+        <p class="kicker reveal">The Shop</p>
+        <h2 class="h2 reveal">More than a haircut.<br/><span class="script">it's the House.</span></h2>
+        <p class="reveal">Since 2015, Reno's House of Fades has been the spot for clean fades and sharp line-ups in Reno. Co-owned by barbers <strong>Anthony Acosta</strong> and <strong>Juan Garcia</strong>, the shop runs on detail, consistency and real barbershop energy.</p>
+        <p class="reveal">The game's always on the screens, the conversation's always going, and every barber takes the time to get your cut exactly right. Walk in as a client, leave like family.</p>
+        <div class="stats reveal">
+          <div><strong data-count="8">0</strong><span>Barbers</span></div>
+          <div><strong data-count="10">0</strong><span>Years in Reno</span></div>
+          <div><strong>4.3★</strong><span>Google Rating</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Barbers / Book ===== -->
+  <section class="section barbers" id="barbers">
+    <span class="anchor" id="book"></span>
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker reveal">Book a Barber</p>
+        <h2 class="h2 reveal">Pick your barber.</h2>
+        <p class="lead reveal">Every barber books through their own page. Tap <strong>Book Now</strong> to see their openings, services and prices. Walk-ins are welcome when chairs are open, but booking ahead locks in your spot.</p>
+      </div>
+      <div class="barber-grid" id="barberGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== Services ===== -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker reveal">Services</p>
+        <h2 class="h2 reveal">The essentials, done right.</h2>
+      </div>
+      <div class="service-grid" id="serviceGrid"></div>
+      <p class="note reveal">Pricing varies by barber. See your barber's booking page for current prices and add-ons.</p>
+    </div>
+  </section>
+
+  <!-- ===== Inside the shop ===== -->
+  <section class="section inside">
+    <div class="container inside-grid">
+      <div class="inside-copy">
+        <p class="kicker reveal">Inside the House</p>
+        <h2 class="h2 reveal">Eight chairs.<br/>One standard.</h2>
+        <p class="reveal">Clean stations, the game on every screen, and a full lineup of barbers working all day. Come see it for yourself at 180 W Peckham Ln.</p>
+        <ul class="ticks reveal">
+          <li>Walk-ins welcome</li>
+          <li>Appointments available</li>
+          <li>Card only (no cash)</li>
+          <li>After-hours & Sun/Mon by request</li>
+        </ul>
+        <a href="#visit" class="btn btn-ghost reveal">Get Directions</a>
+      </div>
+      <div class="inside-media reveal">
+        <div class="phone-frame">
+          <video autoplay muted loop playsinline preload="none" poster="assets/video/shop-poster.jpg" data-lazy-video>
+            <source data-src="assets/video/shop.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <img class="inside-photo" src="assets/img/interior.jpg" alt="Inside House of Fades — row of barber chairs and mirrors" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Gallery ===== -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker reveal">Gallery</p>
+        <h2 class="h2 reveal">From the chair & the block.</h2>
+      </div>
+      <div class="masonry" id="masonry">
+        <figure class="reveal"><img src="assets/img/barber-jersey.jpg" alt="Barber detailing a line-up with a straight razor" loading="lazy" /></figure>
+        <figure class="reveal"><img src="assets/img/anniversary-sign.jpg" alt="Clients outside the House of Fades sign" loading="lazy" /></figure>
+        <figure class="reveal"><img src="assets/img/barber-bw.jpg" alt="Barber working a fade" loading="lazy" /></figure>
+        <figure class="reveal"><img src="assets/img/interior.jpg" alt="Shop interior" loading="lazy" /></figure>
+        <figure class="reveal"><img src="assets/img/merch-hats.jpg" alt="House of Fades hats at the 10-year celebration" loading="lazy" /></figure>
+        <figure class="reveal"><img src="assets/img/team-storefront.jpg" alt="The team outside the shop" loading="lazy" /></figure>
+        <figure class="reveal"><img src="assets/img/anniversary-dj.jpg" alt="DJ at the 10th anniversary block party" loading="lazy" /></figure>
+        <figure class="reveal"><img src="assets/img/anniversary-cake.jpg" alt="10th anniversary cake" loading="lazy" /></figure>
+      </div>
+      <div class="center reveal">
+        <a href="https://www.instagram.com/renoshouseoffades/" target="_blank" rel="noopener" class="btn btn-ghost">More on Instagram @renoshouseoffades</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 10 Year / Community ===== -->
+  <section class="section anniversary">
+    <div class="ann-bg" style="background-image:url('assets/img/anniversary-dj.jpg')"></div>
+    <div class="container ann-inner">
+      <p class="kicker light reveal">2015 — 2025</p>
+      <h2 class="ann-title reveal">10 Years<br/><span class="script">of Fades</span></h2>
+      <p class="reveal">We celebrated a decade in Reno with a block party out front: music, food, merch, and the whole community. Thank you to everyone who's sat in our chairs. Here's to the next ten.</p>
+    </div>
+  </section>
+
+  <!-- ===== Merch ===== -->
+  <section class="section merch">
+    <div class="container merch-grid">
+      <div class="merch-media reveal">
+        <video autoplay muted loop playsinline preload="none" poster="assets/video/merch-poster.jpg" data-lazy-video>
+          <source data-src="assets/video/merch.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="merch-copy">
+        <p class="kicker reveal">HOF Merch</p>
+        <h2 class="h2 reveal">Don't cheat yourself.<br/><span class="script">Treat yourself.</span></h2>
+        <p class="reveal">House of Fades tees, hats and more. Rep the shop around Reno. Ask your barber what's in stock next visit.</p>
+        <a href="https://www.instagram.com/renoshouseoffades/" target="_blank" rel="noopener" class="btn btn-blue reveal">See the Latest Drops</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Reviews ===== -->
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker reveal">Reviews</p>
+        <h2 class="h2 reveal">What Reno says.</h2>
+      </div>
+
+      <div class="rating-row reveal" id="ratingRow"></div>
+
+      <div class="review-slider" id="reviewSlider" hidden>
+        <div class="review-track" id="reviewTrack"></div>
+        <div class="slider-nav">
+          <button id="revPrev" aria-label="Previous review">←</button>
+          <button id="revNext" aria-label="Next review">→</button>
+        </div>
+      </div>
+
+      <div class="highlights">
+        <div class="hl reveal">
+          <span class="hl-num">01</span>
+          <h3>Detail in every cut</h3>
+          <p>Clients keep coming back to the same thing: the barbers take their time until every fade and line-up is immaculate.</p>
+        </div>
+        <div class="hl reveal">
+          <span class="hl-num">02</span>
+          <h3>Family-like vibe</h3>
+          <p>Laid-back energy, good banter and familiar faces. People walk in as clients and leave like family.</p>
+        </div>
+        <div class="hl reveal">
+          <span class="hl-num">03</span>
+          <h3>Game's always on</h3>
+          <p>Sports on the screens all day, so the wait never feels long and the conversation never stops.</p>
+        </div>
+      </div>
+
+      <div class="center review-ctas reveal">
+        <a href="https://www.yelp.com/biz/reno-s-house-of-fades-reno" target="_blank" rel="noopener" class="btn btn-yelp">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg>
+          Read Reviews on Yelp
+        </a>
+        <a href="https://www.facebook.com/renoshouseoffades/reviews" target="_blank" rel="noopener" class="btn btn-ghost">Leave a Review</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Visit ===== -->
+  <section class="section visit" id="visit">
+    <div class="container visit-grid">
+      <div class="visit-info">
+        <p class="kicker reveal">Visit Us</p>
+        <h2 class="h2 reveal">Pull up.</h2>
+        <div class="info-block reveal">
+          <h4>Address</h4>
+          <p>180 W Peckham Ln, Suite 1130<br/>Reno, NV 89509</p>
+          <a href="https://www.google.com/maps/dir//180+W+Peckham+Ln+Ste+1130,+Reno,+NV+89509" target="_blank" rel="noopener" class="link">Get directions →</a>
+        </div>
+        <div class="info-block reveal">
+          <h4>Phone</h4>
+          <p><a href="tel:+17753579590" class="phone-big">(775) 357-9590</a></p>
+        </div>
+        <div class="info-block reveal">
+          <h4>Hours <span class="open-pill" id="openPill"></span></h4>
+          <table class="hours" id="hoursTable"></table>
+          <p class="small">Need an after-hours or Sunday/Monday appointment? Call or message your barber.</p>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="Map to Reno's House of Fades" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=180+W+Peckham+Ln+Suite+1130,+Reno,+NV+89509&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="pole-stripe"></div>
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/img/logo-white.png" alt="Reno's House of Fades" class="footer-logo" />
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <a href="#barbers">Book a Barber</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+      <div>
+        <h4>Find Us</h4>
+        <p>180 W Peckham Ln, Ste 1130<br/>Reno, NV 89509</p>
+        <a href="tel:+17753579590">(775) 357-9590</a>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <div class="socials">
+          <a href="https://www.instagram.com/renoshouseoffades/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21.9 8c-.1-1.6-.4-3-1.6-4.2S17.6 2.2 16 2.1C14.4 2 9.6 2 8 2.1 6.4 2.2 5 2.5 3.8 3.7S2.2 6.4 2.1 8C2 9.6 2 14.4 2.1 16c.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.6.1 6.4.1 8 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.6.1-6.4 0-8zm-2.1 9.9a3.2 3.2 0 0 1-1.8 1.8c-1.3.5-4.3.4-5.7.4s-4.4.1-5.7-.4a3.2 3.2 0 0 1-1.8-1.8c-.5-1.3-.4-4.3-.4-5.7s-.1-4.4.4-5.7A3.2 3.2 0 0 1 6.3 4.7c1.3-.5 4.3-.4 5.7-.4s4.4-.1 5.7.4a3.2 3.2 0 0 1 1.8 1.8c.5 1.3.4 4.3.4 5.7s.1 4.4-.4 5.7z"/></svg></a>
+          <a href="https://www.facebook.com/renoshouseoffades/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M14 8V6.2c0-.8.2-1.2 1.4-1.2H17V2h-2.6C11.3 2 10.3 3.6 10.3 6v2H8v3h2.3v11H14V11h2.7l.3-3H14z"/></svg></a>
+          <a href="https://www.yelp.com/biz/reno-s-house-of-fades-reno" target="_blank" rel="noopener" aria-label="Yelp"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Reno's House of Fades. All rights reserved.</p>
+      <p>Website by <a href="https://www.nexoradigital.live" target="_blank" rel="noopener">Nexora Digital</a></p>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky book bar -->
+  <div class="mobile-bar">
+    <a href="tel:+17753579590">Call</a>
+    <a href="#book" class="primary">Book a Barber</a>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+    <img id="lbImg" alt="" />
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
