@@ -54,11 +54,13 @@
         <h3>${b.name}</h3>
         <span class="barber-role">${b.role}</span>
         <div class="barber-actions">
-          <a class="btn btn-blue" href="${b.book}" target="_blank" rel="noopener">Book Now</a>
+          ${b.book
+            ? `<a class="btn btn-blue" href="${b.book}" target="_blank" rel="noopener">Book Now</a>`
+            : `<a class="btn btn-blue" href="${D.phoneHref}">Call to Book</a>`}
           ${tel ? `<a class="icon-btn" href="${tel}" aria-label="Call ${b.name}">${ICONS.phone}</a>` : ""}
           ${b.ig ? `<a class="icon-btn" href="${b.ig}" target="_blank" rel="noopener" aria-label="${b.name} on Instagram">${ICONS.ig}</a>` : ""}
         </div>
-        <span class="via">Books via ${b.platform}</span>
+        <span class="via">${b.platform ? "Books via " + b.platform : "Book through the shop"}</span>
       </div>
     </article>`;
   }).join("");

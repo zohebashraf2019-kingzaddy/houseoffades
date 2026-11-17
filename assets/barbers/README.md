@@ -12,3 +12,4 @@ Drop each barber's photo here as a JPG named by slug (portrait ~4:5, ~800px wide
 | Rico Colta | rico-colta.jpg |
 | Bryan Banuelos | bryan-banuelos.jpg |
 | Eduardo Mora | eduardo-mora.jpg |
+| Luis Contreras | luis-contreras.jpg |

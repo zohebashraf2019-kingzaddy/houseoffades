@@ -38,7 +38,8 @@ window.HOF = {
     { slug: "keni-rogers",      name: "Keni Rogers",      role: "Barber · Blasian Blendz", phone: "(775) 846-9128", book: "https://booksy.com/en-us/131679_blasian-blendz_barber-shop_29330_reno", platform: "Booksy" },
     { slug: "rico-colta",       name: "Rico Colta",       role: "Barber", phone: null, book: "https://book.squareup.com/appointments/48fo5rng3vodx2/location/LTSFJ78DX7KPY/services", platform: "Square" },
     { slug: "bryan-banuelos",   name: "Bryan Banuelos",   role: "Barber · Bryan Blendz", phone: "(775) 846-1702", book: "https://bryan-blendz.square.site/", platform: "Square" },
-    { slug: "eduardo-mora",     name: "Eduardo Mora",     role: "Barber · Blended Blvd", phone: "(775) 525-4084", book: "https://blended-blvd.square.site/", platform: "Square" }
+    { slug: "eduardo-mora",     name: "Eduardo Mora",     role: "Barber · Blended Blvd", phone: "(775) 525-4084", book: "https://blended-blvd.square.site/", platform: "Square" },
+    { slug: "luis-contreras",   name: "Luis Contreras",   role: "Barber", phone: null, book: null, platform: null }
   ],
 
   services: [
