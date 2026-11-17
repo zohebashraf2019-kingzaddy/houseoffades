@@ -39,9 +39,8 @@
     <article class="barber reveal">
       <div class="barber-photo">
         ${owner ? '<span class="tag-owner">Owner</span>' : ""}
-        <div class="monogram"><span>${initials(b.name)}</span><small>House of Fades</small></div>
-        <img src="assets/barbers/${b.slug}.jpg" alt="${b.name}, barber at House of Fades" loading="lazy"
-             onload="this.previousElementSibling.remove()" onerror="this.remove()">
+        <img src="assets/barbers/${b.slug}.jpg?v=3" alt="${b.name}, barber at House of Fades"
+             onerror="this.outerHTML='<div class=\\'monogram\\'><span>${initials(b.name)}</span><small>House of Fades</small></div>'">
       </div>
       <div class="barber-body">
         <h3>${b.name}</h3>
