@@ -29,7 +29,10 @@ window.HOF = {
   /* Barber photos: drop a square-ish JPG in /assets/barbers/<slug>.jpg
      and it shows up automatically. Until then a monogram card is shown.
      Booking links are each barber's own page for now — swap for the
-     in-house booking tab later. */
+     in-house booking tab later.
+     Each barber gets a profile page at barber.html?id=<slug>.
+     Optional fields for that page: bio, specialty, and
+     services: [{ name: "Haircut", price: 40, dur: "45 min" }]. */
   barbers: [
     { slug: "anthony-acosta",   name: "Anthony Acosta",   role: "Owner · Barber", phone: "(775) 354-7438", book: "https://squareup.com/appointments/book/9V1DMR44KRYG2", platform: "Square", ig: "https://www.instagram.com/ant_banks04/" },
     { slug: "juan-garcia",      name: "Juan Garcia",      role: "Owner · Barber", phone: "(775) 544-1412", book: "https://squareup.com/appointments/book/706HZ2T0MH9DG", platform: "Square" },

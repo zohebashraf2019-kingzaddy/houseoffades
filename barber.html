@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barber | Reno's House of Fades</title>
+  <meta name="description" content="Barber profile, service menu and booking at Reno's House of Fades, 180 W Peckham Ln, Reno NV." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Yellowtail&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=5" />
+</head>
+<body class="page-barber">
+
+  <!-- ===== Nav ===== -->
+  <header class="nav scrolled" id="nav">
+    <a href="index.html" class="nav-logo" aria-label="Reno's House of Fades home">
+      <img src="assets/img/logo-white.png" alt="Reno's House of Fades Barbershop" />
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#about">The Shop</a>
+      <a href="index.html#barbers" class="active">Barbers</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#visit">Visit</a>
+      <a href="#" class="btn btn-sm btn-blue nav-cta" data-book target="_blank" rel="noopener">Book Now</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- ===== Profile ===== -->
+    <section class="profile">
+      <div class="container profile-grid">
+        <figure class="profile-photo reveal">
+          <img id="pPhoto" alt="" />
+          <span class="profile-index" id="pIndex"></span>
+        </figure>
+
+        <div class="profile-info">
+          <a class="back-link" href="index.html#barbers"><span>←</span> All barbers</a>
+          <p class="kicker reveal" id="pRole"></p>
+          <h1 class="profile-name reveal" id="pName"></h1>
+          <a class="profile-ig reveal" id="pIg" target="_blank" rel="noopener"></a>
+          <p class="lead reveal" id="pBio"></p>
+
+          <ul class="profile-facts reveal">
+            <li><span>Specialty</span><strong id="pFocus"></strong></li>
+            <li><span>Books via</span><strong id="pVia"></strong></li>
+            <li><span>Shop</span><strong>180 W Peckham Ln</strong></li>
+          </ul>
+
+          <div class="profile-ctas reveal">
+            <a class="btn btn-blue btn-lg" id="pBook" target="_blank" rel="noopener"></a>
+            <a class="btn btn-ghost" id="pCall"></a>
+          </div>
+          <p class="small reveal" id="pNote"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Menu ===== -->
+    <section class="section menu-section">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker reveal">Service Menu</p>
+          <h2 class="h2 reveal">Services &amp; <span class="script">prices.</span></h2>
+        </div>
+        <div class="price-list" id="pServices"></div>
+        <p class="note reveal" id="pPriceNote"></p>
+      </div>
+    </section>
+
+    <!-- ===== Other barbers ===== -->
+    <section class="section others">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker reveal">The Rest of the Team</p>
+          <h2 class="h2 reveal">More <span class="script">chairs.</span></h2>
+        </div>
+        <div class="others-row" id="pOthers"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer footer-slim">
+    <div class="pole-stripe"></div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Reno's House of Fades · 180 W Peckham Ln, Ste 1130, Reno, NV · <a href="tel:+17753579590">(775) 357-9590</a></p>
+      <p>Website by <a href="https://www.nexoradigital.live" target="_blank" rel="noopener">Nexora Digital</a></p>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky book bar -->
+  <div class="mobile-bar">
+    <a href="tel:+17753579590" id="mCall">Call</a>
+    <a href="#" class="primary" data-book target="_blank" rel="noopener" id="mBook">Book Now</a>
+  </div>
+
+  <script src="js/data.js?v=8"></script>
+  <script src="js/barber.js?v=1"></script>
+</body>
+</html>

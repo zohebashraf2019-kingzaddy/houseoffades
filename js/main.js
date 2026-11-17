@@ -37,32 +37,34 @@
     head: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 26c0-10 5-18 12-18s12 8 12 18c0 9-5 16-12 16s-12-7-12-16z"/><path d="M9 25h3M36 25h3"/><path d="M18 14c2-2 4-3 6-3"/><path d="M34 4l4 4M38 4l-4 4" stroke-width="1.8"/></svg>'
   };
 
-  /* ---------- Barbers ---------- */
+  /* ---------- Barbers (cards link to barber.html?id=<slug>) ---------- */
   const initials = n => n.replace(/[“”"].*?[“”"]/g, "").split(/\s+/).filter(Boolean).map(w => w[0]).slice(0, 2).join("");
+  const handle = url => { const m = (url || "").match(/instagram\.com\/([^/?#]+)/i); return m ? "@" + m[1] : ""; };
+  const pad = n => String(n).padStart(2, "0");
   const grid = $("#barberGrid");
-  grid.innerHTML = D.barbers.map(b => {
+  grid.innerHTML = D.barbers.map((b, i) => {
     const owner = /owner/i.test(b.role);
-    const tel = b.phone ? "tel:+1" + b.phone.replace(/\D/g, "") : null;
     return `
-    <article class="barber reveal">
+    <a class="barber reveal" href="barber.html?id=${b.slug}" aria-label="${b.name}: view menu and book">
       <div class="barber-photo">
-        ${owner ? '<span class="tag-owner">Owner</span>' : ""}
-        <img src="assets/barbers/${b.slug}.jpg?v=3" alt="${b.name}, barber at House of Fades"
+        <img src="assets/barbers/${b.slug}.jpg?v=3" alt="${b.name}, barber at House of Fades" loading="lazy"
              onerror="this.outerHTML='<div class=\\'monogram\\'><span>${initials(b.name)}</span><small>House of Fades</small></div>'">
       </div>
-      <div class="barber-body">
-        <h3>${b.name}</h3>
-        <span class="barber-role">${b.role}</span>
-        <div class="barber-actions">
-          ${b.book
-            ? `<a class="btn btn-blue" href="${b.book}" target="_blank" rel="noopener">Book Now</a>`
-            : `<a class="btn btn-blue" href="${D.phoneHref}">Call to Book</a>`}
-          ${tel ? `<a class="icon-btn" href="${tel}" aria-label="Call ${b.name}">${ICONS.phone}</a>` : ""}
-          ${b.ig ? `<a class="icon-btn" href="${b.ig}" target="_blank" rel="noopener" aria-label="${b.name} on Instagram">${ICONS.ig}</a>` : ""}
-        </div>
-        <span class="via">${b.platform ? "Books via " + b.platform : "Book through the shop"}</span>
+      <div class="barber-shade"></div>
+      <div class="barber-top">
+        <span class="barber-index">${pad(i + 1)} / ${pad(D.barbers.length)}</span>
+        ${owner ? '<span class="tag-owner">Owner</span>' : `<span class="barber-handle">${handle(b.ig)}</span>`}
       </div>
-    </article>`;
+      <span class="barber-view" aria-hidden="true">View</span>
+      <div class="barber-body">
+        <span class="barber-role">${b.role}</span>
+        <h3>${b.name}</h3>
+        <div class="barber-foot">
+          <span>${b.platform ? "Books via " + b.platform : "Book through the shop"}</span>
+          <span class="barber-link">Menu &amp; Book <b>→</b></span>
+        </div>
+      </div>
+    </a>`;
   }).join("");
 
   /* ---------- Services ---------- */
