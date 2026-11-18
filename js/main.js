@@ -178,3 +178,28 @@
 
   $("#year").textContent = new Date().getFullYear();
 })();
+
+/* ---------- Remodel sneak peek: before/after slider ---------- */
+(() => {
+  const peek = document.getElementById("peek");
+  const range = document.getElementById("peekRange");
+  if (!peek || !range) return;
+  const set = v => peek.style.setProperty("--pos", v + "%");
+  range.addEventListener("input", e => set(e.target.value));
+  // gentle intro sweep the first time it scrolls into view
+  const io = new IntersectionObserver(([en]) => {
+    if (!en.isIntersecting) return;
+    io.disconnect();
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let t0 = null;
+    const step = ts => {
+      t0 ??= ts;
+      const p = Math.min((ts - t0) / 1800, 1);
+      const v = 50 + Math.sin(p * Math.PI * 2) * 30 * (1 - p);
+      set(v); range.value = v;
+      if (p < 1) requestAnimationFrame(step);
+    };
+    setTimeout(() => requestAnimationFrame(step), 400);
+  }, { threshold: 0.5 });
+  io.observe(peek);
+})();

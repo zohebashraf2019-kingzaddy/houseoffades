@@ -6,7 +6,7 @@
   <title>Reno's House of Fades | Barbershop in Reno, NV</title>
   <meta name="description" content="Reno's House of Fades — precision fades, sharp line-ups, beard trims and hot towel shaves on W Peckham Ln, Reno NV. 9 barbers, walk-ins welcome, book online." />
   <meta name="theme-color" content="#0a0a0a" />
-  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png?v=2" />
   <meta property="og:title" content="Reno's House of Fades" />
   <meta property="og:description" content="Precision fades, sharp line-ups & hot towel shaves in Reno, NV. Book your barber online." />
   <meta property="og:image" content="assets/img/team-storefront.jpg" />
@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Yellowtail&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=5" />
+  <link rel="stylesheet" href="css/styles.css?v=6" />
 
   <script type="application/ld+json">
   {
@@ -49,20 +49,21 @@
 
   <!-- ===== Loader ===== -->
   <div class="loader" id="loader">
-    <img src="assets/img/logo-white.png" alt="" />
+    <img src="assets/img/logo-hof.png" alt="" />
     <div class="loader-pole"></div>
   </div>
 
   <!-- ===== Nav ===== -->
   <header class="nav" id="nav">
     <a href="#top" class="nav-logo" aria-label="Reno's House of Fades home">
-      <img src="assets/img/logo-white.png" alt="Reno's House of Fades Barbershop" />
+      <img src="assets/img/logo-hof.png" alt="Reno's House of Fades Barbershop" />
     </a>
     <nav class="nav-links" id="navLinks">
       <a href="#about">The Shop</a>
       <a href="#barbers">Barbers</a>
       <a href="#services">Services</a>
       <a href="#gallery">Gallery</a>
+      <a href="#remodel" class="nav-peek">Sneak Peek</a>
       <a href="#reviews">Reviews</a>
       <a href="#visit">Visit</a>
       <a href="#book" class="btn btn-sm btn-blue nav-cta">Book Now</a>
@@ -171,6 +172,39 @@
           </video>
         </div>
         <img class="inside-photo" src="assets/img/interior.jpg" alt="Inside House of Fades — row of barber chairs and mirrors" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Remodel Sneak Peek ===== -->
+  <section class="section remodel" id="remodel">
+    <div class="remodel-bg" style="background-image:url('assets/img/remodel-floor.jpg')"></div>
+    <div class="container">
+      <div class="remodel-head">
+        <span class="soon-badge reveal"><span class="soon-dot"></span> Coming Soon</span>
+        <h2 class="h2 reveal">A New House<br/><span class="script red">is coming.</span></h2>
+        <p class="lead reveal">We're remodeling. First up: a brand new custom epoxy floor, poured in our own colors: black, white and House of Fades red. Same barbers, same standard, a whole new look. Here's an early look.</p>
+      </div>
+
+      <div class="peek reveal" id="peek" style="--pos:50%">
+        <img class="peek-after" src="assets/img/remodel-floor.jpg" alt="Rendering of the remodeled House of Fades with a glossy black, white and red marbled epoxy floor" loading="lazy" />
+        <div class="peek-before">
+          <img src="assets/img/interior.jpg" alt="The House of Fades interior today" loading="lazy" />
+        </div>
+        <span class="peek-tag now">Now</span>
+        <span class="peek-tag next">Coming Soon</span>
+        <div class="peek-handle" aria-hidden="true"><span>⟷</span></div>
+        <input type="range" min="0" max="100" value="50" class="peek-range" id="peekRange" aria-label="Drag to compare the shop now with the upcoming remodel" />
+      </div>
+      <p class="peek-hint reveal">Drag to compare · Rendering shown, final look may vary</p>
+
+      <div class="remodel-points">
+        <div class="rp reveal"><strong>01</strong><h3>Custom Epoxy Floors</h3><p>High-gloss marbled finish in black, white and HOF red.</p></div>
+        <div class="rp reveal"><strong>02</strong><h3>Fresh New Look</h3><p>A shop that matches the work coming out of the chairs.</p></div>
+        <div class="rp reveal"><strong>03</strong><h3>Still Cutting</h3><p>Keep booking as usual. We'll post any schedule changes on Instagram.</p></div>
+      </div>
+      <div class="center reveal">
+        <a href="https://www.instagram.com/renoshouseoffades/" target="_blank" rel="noopener" class="btn btn-red">Follow the Remodel @renoshouseoffades</a>
       </div>
     </div>
   </section>
@@ -304,13 +338,14 @@
     <div class="pole-stripe"></div>
     <div class="container footer-grid">
       <div>
-        <a href="#top" class="footer-logo-link" aria-label="Back to top"><img src="assets/img/logo-white.png" alt="Reno's House of Fades" class="footer-logo" /></a>
+        <a href="#top" class="footer-logo-link" aria-label="Back to top"><img src="assets/img/logo-hof.png" alt="Reno's House of Fades" class="footer-logo" /></a>
       </div>
       <div>
         <h4>Shop</h4>
         <a href="#barbers">Book a Barber</a>
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
+      <a href="#remodel" class="nav-peek">Sneak Peek</a>
         <a href="#reviews">Reviews</a>
       </div>
       <div>
