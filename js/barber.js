@@ -70,6 +70,13 @@
     ? `Booking opens ${first}'s ${b.platform || "booking"} page with live openings, services and current prices.`
     : `Online booking for ${first} is coming soon. Call the shop at <a href="${D.phoneHref}">${D.phone}</a> to get in his chair.`;
 
+  /* ---------- Booking policies ---------- */
+  const reach = b.phone ? `call or text ${first} at <a href="${tel}">${b.phone}</a>` : `call the shop at <a href="${D.phoneHref}">${D.phone}</a>`;
+  $("#polLate").innerHTML = `Please ${reach} as soon as you know. More than 10–15 min late may mean a shorter service or rescheduling.`;
+  $("#polCancel").innerHTML = b.book
+    ? `Please give at least 24 hours' notice. Use your ${b.platform || "booking"} confirmation link, or ${reach}.`
+    : `Please give at least 24 hours' notice. ${reach.charAt(0).toUpperCase() + reach.slice(1)}.`;
+
   /* ---------- Service menu ---------- */
   const own = Array.isArray(b.services) && b.services.length;
   const services = own ? b.services : D.services.map(s => ({ name: s.name, desc: s.desc }));

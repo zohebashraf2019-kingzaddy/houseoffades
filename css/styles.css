@@ -403,3 +403,39 @@ a{color:inherit;text-decoration:none}
   .peek{aspect-ratio:4/5}
   .peek-after{object-position:center 75%}
 }
+
+/* ---------- Terms & Policies page ---------- */
+.legal{padding:clamp(8rem,14vw,10rem) 0 5rem}
+.legal-wrap > .lead{margin-bottom:.6rem}
+.legal-updated{color:#6f6d68;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:2.6rem}
+.policy-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-bottom:3.5rem}
+.policy-card{padding:1.6rem;border-radius:var(--radius);background:var(--ink);border:1px solid var(--line);border-top:3px solid #b3152b}
+.pc-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:rgba(179,21,43,.15);color:#ff8a9a;font-size:1.15rem;margin-bottom:.9rem}
+.policy-card h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:1.3rem;letter-spacing:.02em;margin-bottom:.4rem}
+.policy-card p{color:var(--muted);font-size:.93rem}
+.legal-body{display:grid;grid-template-columns:240px 1fr;gap:3.5rem;align-items:start}
+.legal-toc{position:sticky;top:100px;display:grid;gap:.15rem;padding-left:1rem;border-left:1px solid var(--line)}
+.legal-toc a{color:var(--muted);font-size:.84rem;padding:.3rem 0;transition:color .2s}
+.legal-toc a:hover{color:var(--white)}
+.legal-text{max-width:760px}
+.legal-text h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:1.55rem;letter-spacing:.02em;margin:2.6rem 0 .8rem;scroll-margin-top:100px}
+.legal-text h2:first-child{margin-top:0}
+.legal-text p,.legal-text li{color:#cfccc5;font-size:.98rem}
+.legal-text p{margin-bottom:.9rem}
+.legal-text ul{padding-left:1.2rem;display:grid;gap:.5rem;margin-bottom:.9rem}
+.legal-text li::marker{color:#e0233f}
+.legal-text a,.policy-note a{color:#fff;text-decoration:underline;text-decoration-color:rgba(224,35,63,.7);text-underline-offset:3px}
+.legal-contact{padding:1.3rem 1.5rem;border-radius:var(--radius);background:var(--ink);border:1px solid var(--line)}
+
+/* Barber page policy box */
+.policy-note{margin-top:3rem;padding:1.8rem;border-radius:var(--radius);background:var(--ink);border:1px solid var(--line);border-left:3px solid #b3152b}
+.policy-note h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:1.4rem;letter-spacing:.02em;margin-bottom:1rem}
+.policy-note ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-bottom:1.1rem}
+.policy-note li strong{display:block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:#ff8a9a;margin-bottom:.3rem}
+.policy-note li span{color:#cfccc5;font-size:.92rem}
+.policy-note p{color:var(--muted);font-size:.88rem}
+@media (max-width:900px){
+  .policy-cards,.policy-note ul{grid-template-columns:1fr}
+  .legal-body{grid-template-columns:1fr;gap:2rem}
+  .legal-toc{position:static;grid-template-columns:1fr 1fr;border-left:0;padding-left:0}
+}
