@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Yellowtail&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=8" />
+  <link rel="stylesheet" href="css/styles.css?v=9" />
 
   <script type="application/ld+json">
   {
@@ -216,17 +216,26 @@
         <p class="kicker reveal">Gallery</p>
         <h2 class="h2 reveal">From the chair & the block.</h2>
       </div>
-      <div class="masonry" id="masonry">
-        <figure class="reveal"><img src="assets/img/barber-jersey.jpg" alt="Eduardo Mora detailing a line-up with a straight razor" loading="lazy" /></figure>
-        <figure class="reveal"><img src="assets/img/anniversary-sign.jpg" alt="Clients outside the House of Fades sign" loading="lazy" /></figure>
-        <figure class="reveal"><img src="assets/img/barber-bw.jpg" alt="Keni Rogers working a fade" loading="lazy" /></figure>
-        <figure class="reveal"><img src="assets/img/interior.jpg" alt="Shop interior" loading="lazy" /></figure>
-        <figure class="reveal"><img src="assets/img/merch-hats.jpg" alt="House of Fades hats at the 10-year celebration" loading="lazy" /></figure>
-        <figure class="reveal"><img src="assets/img/team-storefront.jpg" alt="The team outside the shop" loading="lazy" /></figure>
-        <figure class="reveal"><img src="assets/img/anniversary-dj.jpg" alt="DJ at the 10th anniversary block party" loading="lazy" /></figure>
-        <figure class="reveal"><img src="assets/img/anniversary-cake.jpg" alt="10th anniversary cake" loading="lazy" /></figure>
+      <div class="gallery-grid" id="galleryGrid">
+        <figure class="g-item reveal"><img src="assets/gallery/barbers-at-work.jpg" alt="Barbers at work on a full row of clients" loading="lazy" style="object-position:50% 40%" /></figure>
+        <figure class="g-item reveal"><img src="assets/gallery/barber-jersey.jpg" alt="Eduardo Mora detailing a line-up with a straight razor" loading="lazy" style="object-position:50% 35%" /></figure>
+        <figure class="g-item reveal"><img src="assets/gallery/shop-interior-wide.jpg" alt="Wide view of the shop floor and barber stations" loading="lazy" style="object-position:50% 50%" /></figure>
+        <figure class="g-item reveal"><img src="assets/gallery/front-door.jpg" alt="House of Fades front door with logo and barber pole decals" loading="lazy" style="object-position:35% 50%" /></figure>
+        <figure class="g-item reveal"><img src="assets/img/barber-bw.jpg" alt="Keni Rogers working a fade" loading="lazy" style="object-position:50% 40%" /></figure>
+        <figure class="g-item reveal"><img src="assets/gallery/mirror-logo.jpg" alt="House of Fades logo etched on the waiting area mirror" loading="lazy" style="object-position:50% 50%" /></figure>
+        <figure class="g-item reveal"><img src="assets/img/team-storefront.jpg" alt="The team outside the shop" loading="lazy" style="object-position:50% 50%" /></figure>
+        <figure class="g-item reveal"><img src="assets/gallery/hof-hats.jpg" alt="House of Fades snapback hats on display" loading="lazy" style="object-position:35% 50%" /></figure>
+        <figure class="g-item reveal g-more"><img src="assets/img/interior.jpg" alt="Row of barber chairs and mirrors" loading="lazy" style="object-position:50% 50%" /></figure>
+        <figure class="g-item reveal g-more"><img src="assets/gallery/waiting-lounge.jpg" alt="Waiting lounge with leather sofas, TVs and merch case" loading="lazy" style="object-position:50% 55%" /></figure>
+        <figure class="g-item reveal g-more"><img src="assets/img/anniversary-sign.jpg" alt="Clients outside the House of Fades sign" loading="lazy" style="object-position:50% 50%" /></figure>
+        <figure class="g-item reveal g-more"><img src="assets/img/merch-hats.jpg" alt="House of Fades hats at the 10-year celebration" loading="lazy" style="object-position:50% 50%" /></figure>
+        <figure class="g-item reveal g-more"><img src="assets/gallery/shop-floor-angle.jpg" alt="Barber stations decorated with sports memorabilia" loading="lazy" style="object-position:50% 50%" /></figure>
+        <figure class="g-item reveal g-more"><img src="assets/img/anniversary-dj.jpg" alt="DJ at the 10th anniversary block party" loading="lazy" style="object-position:50% 50%" /></figure>
+        <figure class="g-item reveal g-more"><img src="assets/gallery/client-storefront.jpg" alt="Happy client outside the House of Fades storefront" loading="lazy" style="object-position:50% 30%" /></figure>
+        <figure class="g-item reveal g-more"><img src="assets/img/anniversary-cake.jpg" alt="10th anniversary cake" loading="lazy" style="object-position:50% 50%" /></figure>
       </div>
-      <div class="center reveal">
+      <div class="center gallery-ctas reveal">
+        <button class="btn btn-ghost" id="galleryMore" type="button" aria-expanded="false" aria-controls="galleryGrid">View Full Gallery <span class="g-count">+8</span></button>
         <a href="https://www.instagram.com/renoshouseoffades/" target="_blank" rel="noopener" class="btn btn-ghost">More on Instagram @renoshouseoffades</a>
       </div>
     </div>
@@ -372,10 +381,13 @@
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous photo">←</button>
     <img id="lbImg" alt="" />
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Next photo">→</button>
+    <span class="lb-count" id="lbCount"></span>
   </div>
 
   <script src="js/data.js?v=9"></script>
-  <script src="js/main.js?v=7"></script>
+  <script src="js/main.js?v=8"></script>
 </body>
 </html>

@@ -177,16 +177,50 @@
     }, { passive: true });
   }
 
-  /* ---------- Lightbox ---------- */
-  const lb = $("#lightbox"), lbImg = $("#lbImg");
-  document.querySelectorAll(".masonry figure").forEach(f => f.addEventListener("click", () => {
-    const img = f.querySelector("img"); lbImg.src = img.src; lbImg.alt = img.alt;
-    lb.classList.add("open"); lb.setAttribute("aria-hidden", "false");
+  /* ---------- Gallery: show 8, expand for the rest ---------- */
+  const gGrid = $("#galleryGrid"), moreBtn = $("#galleryMore");
+  if (gGrid && moreBtn) {
+    const extra = gGrid.querySelectorAll(".g-more");
+    if (!extra.length) moreBtn.hidden = true;
+    moreBtn.addEventListener("click", () => {
+      const open = gGrid.classList.toggle("expanded");
+      moreBtn.setAttribute("aria-expanded", open);
+      moreBtn.innerHTML = open ? "Show Less" : `View Full Gallery <span class="g-count">+${extra.length}</span>`;
+      if (open) extra.forEach((f, k) => { f.classList.remove("in"); setTimeout(() => f.classList.add("in"), 40 + k * 60); });
+      else gGrid.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
+  /* ---------- Lightbox (browse all gallery photos) ---------- */
+  const lb = $("#lightbox"), lbImg = $("#lbImg"), lbCount = $("#lbCount");
+  const pics = [...document.querySelectorAll(".gallery-grid figure img")];
+  let cur = 0;
+  const show = n => {
+    cur = (n + pics.length) % pics.length;
+    lbImg.src = pics[cur].src; lbImg.alt = pics[cur].alt;
+    lbCount.textContent = `${cur + 1} / ${pics.length}`;
+  };
+  pics.forEach((img, k) => img.parentElement.addEventListener("click", () => {
+    show(k); lb.classList.add("open"); lb.setAttribute("aria-hidden", "false");
   }));
   const close = () => { lb.classList.remove("open"); lb.setAttribute("aria-hidden", "true"); };
   $("#lbClose").onclick = close;
+  $("#lbPrev").onclick = e => { e.stopPropagation(); show(cur - 1); };
+  $("#lbNext").onclick = e => { e.stopPropagation(); show(cur + 1); };
   lb.addEventListener("click", e => { if (e.target === lb) close(); });
-  document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
+  document.addEventListener("keydown", e => {
+    if (!lb.classList.contains("open")) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") show(cur - 1);
+    if (e.key === "ArrowRight") show(cur + 1);
+  });
+  let tx = null;
+  lb.addEventListener("touchstart", e => (tx = e.touches[0].clientX), { passive: true });
+  lb.addEventListener("touchend", e => {
+    if (tx === null) return;
+    const dx = e.changedTouches[0].clientX - tx; tx = null;
+    if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1));
+  });
 
   $("#year").textContent = new Date().getFullYear();
 })();
