@@ -8,21 +8,14 @@
   setTimeout(() => $("#loader").classList.add("done"), 3000); // safety
 
   /* ---------- Nav ---------- */
-  const nav = $("#nav"), burger = $("#burger"), links = $("#navLinks");
+  const nav = $("#nav");
   const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 40);
   window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
-  burger.addEventListener("click", () => {
-    burger.classList.toggle("open"); links.classList.toggle("open");
-    document.body.style.overflow = links.classList.contains("open") ? "hidden" : "";
-  });
-  links.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
-    burger.classList.remove("open"); links.classList.remove("open"); document.body.style.overflow = "";
-  }));
 
   /* ---------- Logo → back to top ---------- */
   document.querySelectorAll(".nav-logo, .footer-logo-link").forEach(a => a.addEventListener("click", e => {
     e.preventDefault();
-    burger.classList.remove("open"); links.classList.remove("open"); document.body.style.overflow = "";
+    window.hofCloseMenu && window.hofCloseMenu();
     window.scrollTo({ top: 0, behavior: "smooth" });
     history.replaceState(null, "", location.pathname);
   }));

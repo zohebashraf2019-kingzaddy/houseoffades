@@ -3,14 +3,6 @@
   const $ = s => document.querySelector(s);
 
   /* Mobile menu */
-  const burger = $("#burger"), links = $("#navLinks");
-  burger.addEventListener("click", () => {
-    burger.classList.toggle("open"); links.classList.toggle("open");
-    document.body.style.overflow = links.classList.contains("open") ? "hidden" : "";
-  });
-  links.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
-    burger.classList.remove("open"); links.classList.remove("open"); document.body.style.overflow = "";
-  }));
   $("#year").textContent = new Date().getFullYear();
 
   /* Reveal on scroll */
