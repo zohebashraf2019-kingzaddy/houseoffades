@@ -108,24 +108,36 @@
       </div>
     </a>`).join("");
 
-  /* ---------- Review slider (renders once reviews are added in data.js) ---------- */
+  /* ---------- Review wall (renders once reviews are added in data.js) ---------- */
   if (D.reviews.length) {
-    const slider = $("#reviewSlider"), track = $("#reviewTrack");
-    slider.hidden = false;
-    track.innerHTML = D.reviews.map(r => `
-      <div class="review">
-        <div class="q">“</div>
-        <div class="stars" style="color:#fbbf24;letter-spacing:.15em">${stars(r.stars || 5)}</div>
-        <p>${r.text}</p>
-        <div class="who">${r.name}<small>${r.source || "Yelp"}${r.date ? " · " + r.date : ""}${r.barber ? " · Cut by " + r.barber : ""}</small></div>
-      </div>`).join("");
-    let i = 0;
-    const go = n => { i = (n + D.reviews.length) % D.reviews.length; track.style.transform = `translateX(-${i * 100}%)`; };
-    $("#revPrev").onclick = () => go(i - 1);
-    $("#revNext").onclick = () => go(i + 1);
-    let auto = setInterval(() => go(i + 1), 6000);
-    slider.addEventListener("mouseenter", () => clearInterval(auto));
-    slider.addEventListener("mouseleave", () => (auto = setInterval(() => go(i + 1), 6000)));
+    const wall = $("#reviewWall");
+    const esc = t => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const byBarber = slug => D.barbers.find(b => b.slug === slug);
+    const nick = b => { const m = b.name.match(/[“"](.+?)[”"]/); return m ? m[1] : b.name.split(" ")[0]; };
+    wall.hidden = false;
+    wall.innerHTML = D.reviews.map(r => {
+      const b = r.barber && byBarber(r.barber);
+      const long = (r.text.length + (r.more || "").length) > 260;
+      return `
+      <article class="rv reveal${long ? " is-long" : ""}">
+        <div class="rv-top">
+          <span class="rv-avatar">${esc(r.name[0])}</span>
+          <div class="rv-who"><strong>${esc(r.name)}</strong><small>${esc(r.from || "")}</small></div>
+          <span class="rv-src">${esc(r.source || "Yelp")}</span>
+        </div>
+        ${r.stars ? `<div class="rv-stars">${stars(r.stars)}</div>` : ""}
+        <div class="rv-body"><p>${esc(r.text)}</p>${r.more ? `<p class="rv-more">${esc(r.more)}</p>` : ""}</div>
+        ${long ? `<button class="rv-toggle" type="button">Read more</button>` : ""}
+        <div class="rv-foot">
+          <span>${esc(r.date || "")}</span>
+          ${b ? `<a href="barber.html?id=${b.slug}">Cut by ${esc(nick(b))} →</a>` : ""}
+        </div>
+      </article>`;
+    }).join("");
+    wall.querySelectorAll(".rv-toggle").forEach(btn => btn.addEventListener("click", () => {
+      const card = btn.closest(".rv"); const open = card.classList.toggle("open");
+      btn.textContent = open ? "Show less" : "Read more";
+    }));
   }
 
   /* ---------- Reveal on scroll ---------- */
