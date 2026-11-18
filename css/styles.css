@@ -487,3 +487,11 @@ button.btn{font-family:inherit}
 .loader-pole{background:repeating-linear-gradient(-45deg,var(--white) 0 10px,var(--blue) 10px 20px,var(--white) 20px 30px,#111 30px 40px);background-size:200% 100%}
 .pole-stripe{background:repeating-linear-gradient(-45deg,var(--white) 0 14px,var(--blue) 14px 28px,var(--white) 28px 42px,#111 42px 56px);background-size:200% 100%}
 .service::after{background:repeating-linear-gradient(-45deg,var(--white) 0 8px,var(--blue) 8px 16px,var(--white) 16px 24px,#111 24px 32px)}
+
+/* Reviews: 4-card even grid + Yelp CTA */
+.review-wall{columns:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;align-items:stretch}
+.rv{margin-bottom:0}
+.rv-foot{margin-top:auto}
+.rv-more-cta{display:grid;justify-items:center;gap:.9rem;margin:2.4rem 0 3.5rem}
+.rv-more-cta .rv-credit{margin:0}
+@media (max-width:760px){.review-wall{grid-template-columns:1fr}}

@@ -115,7 +115,8 @@
     const byBarber = slug => D.barbers.find(b => b.slug === slug);
     const nick = b => { const m = b.name.match(/[“"](.+?)[”"]/); return m ? m[1] : b.name.split(" ")[0]; };
     wall.hidden = false;
-    wall.innerHTML = D.reviews.map(r => {
+    const shown = D.reviews.slice(0, D.reviewsShown || 4);
+    wall.innerHTML = shown.map(r => {
       const b = r.barber && byBarber(r.barber);
       const long = (r.text.length + (r.more || "").length) > 260;
       return `
