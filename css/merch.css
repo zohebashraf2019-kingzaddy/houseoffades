@@ -150,3 +150,8 @@
 @media (prefers-reduced-motion:reduce){.m-sticker svg,.m-ticker-track{animation:none}}
 html:has(body.page-merch),body.page-merch{overflow-x:clip}
 .m-hero,.m-ticker,.m-menu,.m-drop,.m-popup,.m-soon{overflow-x:clip}
+
+/* Script H logo mark */
+.h-mark{display:inline-block;height:1.05em;width:auto;vertical-align:-.12em;margin:0 .04em;transform:rotate(-4deg);filter:drop-shadow(0 8px 18px rgba(0,0,0,.55))}
+.h-mark-sm{height:.95em;vertical-align:-.1em}
+.m-sticker-h{position:absolute;left:50%;top:50%;width:52%;height:auto;transform:translate(-50%,-50%) rotate(-6deg);filter:drop-shadow(0 4px 8px rgba(0,0,0,.35));pointer-events:none}
