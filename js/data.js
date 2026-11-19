@@ -35,13 +35,13 @@ window.HOF = {
      services: [{ name: "Haircut", price: 40, dur: "45 min" }]. */
   barbers: [
     { slug: "anthony-acosta",   name: "Anthony Acosta",   role: "Owner · Barber", phone: "(775) 354-7438", book: "https://squareup.com/appointments/book/9V1DMR44KRYG2", platform: "Square", ig: "https://www.instagram.com/ant_banks04/" },
-    { slug: "juan-garcia",      name: "Juan Garcia",      role: "Owner · Barber", phone: "(775) 544-1412", book: "https://squareup.com/appointments/book/706HZ2T0MH9DG", platform: "Square" },
+    { slug: "juan-garcia",      name: "Juan Garcia",      role: "Owner · Barber", phone: "(775) 544-1412", book: "https://squareup.com/appointments/book/706HZ2T0MH9DG", platform: "Square", ig: "https://www.instagram.com/j_da_barber_/" },
     { slug: "rodolfo-silverio", name: "Rodolfo “Rudy” Silverio", role: "Barber", phone: "(775) 741-5081", book: "https://rudyhof.setmore.com/", platform: "Setmore" },
-    { slug: "steven-garcia",    name: "Steven Garcia",    role: "Barber", phone: "(775) 393-0740", book: "https://squareup.com/appointments/book/2WKZJ8S3WJA9F", platform: "Square" },
+    { slug: "steven-garcia",    name: "Steven Garcia",    role: "Barber", phone: "(775) 393-0740", book: "https://squareup.com/appointments/book/2WKZJ8S3WJA9F", platform: "Square", ig: "https://www.instagram.com/stevengarciaa15/" },
     { slug: "keni-rogers",      name: "Keni Rogers",      role: "Barber · Blasian Blendz", phone: "(775) 846-9128", book: "https://booksy.com/en-us/131679_blasian-blendz_barber-shop_29330_reno", platform: "Booksy" },
     { slug: "rico-colta",       name: "Rico Colta",       role: "Barber", phone: null, book: "https://book.squareup.com/appointments/48fo5rng3vodx2/location/LTSFJ78DX7KPY/services", platform: "Square" },
-    { slug: "bryan-banuelos",   name: "Bryan Banuelos",   role: "Barber · Bryan Blendz", phone: "(775) 846-1702", book: "https://bryan-blendz.square.site/", platform: "Square" },
-    { slug: "eduardo-mora",     name: "Eduardo Mora",     role: "Barber · Blended Blvd", phone: "(775) 525-4084", book: "https://blended-blvd.square.site/", platform: "Square" },
+    { slug: "bryan-banuelos",   name: "Bryan Banuelos",   role: "Barber · Bryan Blendz", phone: "(775) 846-1702", book: "https://bryan-blendz.square.site/", platform: "Square", ig: "https://www.instagram.com/bb_blendz/" },
+    { slug: "eduardo-mora",     name: "Eduardo Mora",     role: "Barber · Blended Blvd", phone: "(775) 525-4084", book: "https://blended-blvd.square.site/", platform: "Square", ig: "https://www.instagram.com/blended_blvd/" },
     { slug: "luis-contreras",   name: "Luis Contreras",   role: "Barber", phone: null, book: "https://book.squareup.com/appointments/j2jhdrlfbn4y6l/location/LYGQ1D9JHS8Q1/services", platform: "Square", ig: "https://www.instagram.com/barberweich/" }
   ],
 
